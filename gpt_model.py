@@ -24,9 +24,14 @@ class GPTModel:
         )
     
     def get_completion_text(self, comp_in:openai.Completion) -> str:
-        return comp_in[comp_in["choices"][0]["text"]]
+        return comp_in["choices"][0]["text"]
     
     def get_json_resp_dict(self, comp_in:openai.Completion) -> dict:
-        return json.loads(self.get_completion_text(comp_in))
+        try:
+            dict_out = json.loads(self.get_completion_text(comp_in))
+        except:
+            return None
+        return dict_out
+
     
     
