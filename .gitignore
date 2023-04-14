@@ -1,2 +1,6 @@
 .DS_Store
 gpt
+gpt_key.rtf
+key.py
+__pycache__
+.vscode/
