@@ -4,3 +4,5 @@ gpt_key.rtf
 key.py
 __pycache__
 .vscode/
+reddit_api_keys.py
+sent_venv
